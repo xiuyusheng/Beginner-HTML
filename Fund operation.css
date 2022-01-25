@@ -2,6 +2,23 @@
   margin: 0%;
   padding: 0%;
 }
+@keyframes move {
+  0% {
+    transform: translate(0px);
+  }
+  10% {
+    transform: translate(100px);
+  }
+  50% {
+    transform: translate(100px, 500px);
+  }
+  75% {
+    transform: translate(200px, 900px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
 body {
   background-color: #bd0505;
 }
@@ -80,10 +97,27 @@ body {
   border: 1px solid #feaa9e;
   outline: 10px solid #fd696f;
 }
-#div2 div {
-  float: right;
-}
 #div3 img {
   width: 300px;
   height: 150px;
+  animation-name: move;
+  animation-duration: 3s;
+}
+#div4 {
+  width: auto;
+  height: 50px;
+  border: 3px solid #000000;
+  border-radius: 25px;
+  display: flex;
+}
+#div4 p {
+  background-color: #fafa00;
+  height: 50px;
+  border-radius: 40px;
+}
+#div4 p #div4_p_p {
+  display: none;
+  font-size: 10px;
+  text-align: right;
+  font-family: KaiTi;
 }
