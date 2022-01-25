@@ -1,123 +1,134 @@
-* {
-  margin: 0%;
-  padding: 0%;
+*{
+    margin: 0%;
+    padding: 0%;
 }
-@keyframes move {
-  0% {
-    transform: translate(0px);
-  }
-  10% {
-    transform: translate(100px);
-  }
-  50% {
-    transform: translate(100px, 500px);
-  }
-  75% {
-    transform: translate(200px, 900px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
+@keyframes move{
+    0%{
+        transform: translate(0px);
+    }
+    10%{
+        transform: translate(100px);
+
+    }
+    50%{
+        transform: translate(100px,500px);
+
+    }
+    75%{
+        transform: translate(200px,900px);
+
+    }
+    100%{
+        transform: translate(00px,00px);
+
+    }
+} 
+body{
+    background-color: rgb(189, 5, 5);
 }
-body {
-  background-color: #bd0505;
+#div0{
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 17px;
+    background-color: salmon;
+    p{
+        position: relative;
+        top: 70px;
+    }
 }
-#div0 {
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  border-radius: 17px;
-  background-color: salmon;
+#div1{
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    background-color: salmon;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 100px;
+    p{
+        letter-spacing: 0.3em;
+        position: relative;
+        top: 10px;
+        color: red;
+        font-size: 40px;
+        font-family: KaiTi;
+        
+    }
+    #date{
+        position: relative;
+        top: 15px;
+        width: 300px;
+        height: 50px;
+        display: inline-block;
+        p{
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 10px;
+            font-size: 15px;
+            width: 40px;
+            height: 20px;
+            display: inline-block;
+            color: rgb(189, 5, 5);
+            margin-right: 20px;
+            border-radius: 5px;
+            font-weight: 1000;
+            background-color: rgb(250, 250, 0);
+            letter-spacing: 0;
+            font-family: YouYuan;
+            
+          
+        }
+        #chunjie{
+            color: rgb(189, 5, 5);
+        }
+    }
+    .millisecond{
+        p{
+            letter-spacing: 0px;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+    }
+    #millise{
+
+        height: 25px;
+        width: 100px;
+        background-color: rgb(250, 250, 0);
+        font-size: 20px;
+        display: inline-block;
+        border-radius: 17px;
+    }
 }
-#div0 p {
-  position: relative;
-  top: 70px;
+#div2{
+    margin-top: 100px;
+    width: 1000px;
+    height: 1000px;
+    border:1px solid #feaa9e;
+    outline:10px solid #fd696f;
 }
-#div1 {
-  position: absolute;
-  top: 0px;
-  right: 0%;
-  background-color: salmon;
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
+#div3{
+    img{
+            width: 300px;
+            height: 150px;
+            animation-name: move;
+            animation-duration: 3s;
+      }
 }
-#div1 p {
-  letter-spacing: 0.3em;
-  position: relative;
-  top: 10px;
-  color: red;
-  font-size: 40px;
-  font-family: KaiTi;
-}
-#div1 #date {
-  position: relative;
-  top: 15px;
-  width: 300px;
-  height: 50px;
-  display: inline-block;
-}
-#div1 #date p {
-  width: 20px;
-  position: relative;
-  top: 10px;
-  font-size: 15px;
-  width: 40px;
-  height: 20px;
-  display: inline-block;
-  color: #bd0505;
-  margin-right: 20px;
-  border-radius: 5px;
-  font-weight: 1000;
-  background-color: #fafa00;
-  letter-spacing: 0;
-  font-family: YouYuan;
-}
-#div1 #date #chunjie {
-  color: #bd0505;
-}
-#div1 .millisecond p {
-  letter-spacing: 0px;
-  margin-bottom: 20px;
-  font-size: 30px;
-}
-#div1 #millise {
-  height: 25px;
-  width: 100px;
-  background-color: #fafa00;
-  font-size: 20px;
-  display: inline-block;
-  border-radius: 17px;
-}
-#div2 {
-  margin-top: 100px;
-  width: 1000px;
-  height: 1000px;
-  border: 1px solid #feaa9e;
-  outline: 10px solid #fd696f;
-}
-#div3 img {
-  width: 300px;
-  height: 150px;
-  animation-name: move;
-  animation-duration: 3s;
-}
-#div4 {
-  width: auto;
-  height: 50px;
-  border: 3px solid #000000;
-  border-radius: 25px;
-  display: flex;
-}
-#div4 p {
-  background-color: #fafa00;
-  height: 50px;
-  border-radius: 40px;
-}
-#div4 p #div4_p_p {
-  display: none;
-  font-size: 10px;
-  text-align: right;
-  font-family: KaiTi;
+#div4{
+    margin-top: 200px;
+    width: auto;
+    height: 50px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    display: flex;
+    p{
+        opacity: 0;
+        background-color: rgb(250, 250, 0);
+        height: 50px;
+        border-radius: 40px;
+        
+    }
 }
