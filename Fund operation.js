@@ -31,29 +31,17 @@
 // 进度条
     var inputTime2 = +new Date('2022-1-25');
     var inputTime3 = +new Date('2022-2-1');
-    var div4_width = document.getElementById('div4').offsetWidth;
     var div4_p = document.getElementById('div4_p');
+    var p = document.getElementById('p');
 function xiu(){
-
+    var div4_width = document.getElementById('div4').offsetWidth;
     var inputTime4 = +new Date();
     var shijianbi = ((inputTime4 - inputTime2) / (inputTime3 - inputTime2));
-
     div4_p.style.width = div4_width * shijianbi + 'px';
-   
+    div4_p.innerHTML = '进度为：' + shijianbi * 100 + '%';
     setTimeout('xiu()',1);
 }
 xiu();
-div4_p.onmouseover = function(){
-    var inputTime4 = +new Date();
-    var shijianbi = ((inputTime4 - inputTime2) / (inputTime3 - inputTime2));
-    div4_p.innerHTML ='进度为：' + shijianbi;
-    setTimeout('div4_p.onmouseover',1);
-}
-div4_p.onmouseout = function(){
-    var inputTime4 = +new Date();
-    var shijianbi = ((inputTime4 - inputTime2) / (inputTime3 - inputTime2));
-    div4_p.innerHTML = ' <p style="position: relative;top: 30%;text-align: right;color: black;background: none;font-size:10px;display: none;">进度为：' + shijianbi + '</p>';
-}
 var a = 0,b = 0,c = 0,d=0;
 function xun(){
     // 获取当前时间
