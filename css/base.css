@@ -1,0 +1,172 @@
+/* 字体初始化设置 */
+@font-face {
+	font-family:YSBT;
+	src: url(../font/YouShebiaoti.ttf);
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.ttf?t=1624799176554') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* 默认样式清除设置 */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	list-style: none;
+	text-decoration: none;
+}
+/* 全局基础设置 */
+body{
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color:#FFFFFF;
+	background: url(../images/BG.jpg) repeat fixed center;
+}
+/* ------------- */
+/* 导航栏背景设置 */
+#header_con {
+	/* 通栏 */
+	width: 100%;
+	height: 90px;
+	/* background: rgba(255,255,255,0.9); */
+	background: url(../images/bg-lm.png) repeat center;
+	border-bottom:3px solid rgba(0, 0, 0,.5);
+	overflow: hidden;
+	z-index: 10;
+}
+/* 导航栏“列表”设置 */
+#header_con>ul {
+	/* 版心 */
+	width: 800px;
+	margin: 0 auto;
+	
+}
+/* 导航栏LOGO */
+#header_con li.LOGO{
+	/* 长宽边距 */
+	width: 70px;
+	height: 70px;
+	margin: 10px;
+	
+	/* LOGO阴影样式 */
+	-webkit-filter: drop-shadow(0px 0px 0px );
+	filter: drop-shadow(0px 0px 0px );
+	
+	background: url(../images/LOGO.png) no-repeat;
+}
+/* 导航栏LOGO动效 */
+#header_con li.LOGO:hover{	
+	-webkit-filter: drop-shadow(0px 2px 10px #ffffff);
+	filter: drop-shadow(0px 2px 10px #ffffff);
+	
+	transition: all 0.2s linear 0s;
+}
+/* 导航栏超链接设置*/
+a.anav:link,a.anav:visited{
+    text-decoration: none;
+    color:#d8d8d8;
+	/* color:#0865a3; */
+	}
+
+a.anav:hover{
+	border-top:5px solid #ffffff ;
+	border-bottom:5px solid #ffffff ;
+	border-radius: 5px;
+	color:#ffffff;
+}
+/* 导航栏行竖改横 */
+#header_con li{	
+	float: left;
+	font-size: 20px;
+	font-family: YSBT;
+	margin: 10px;
+	line-height: 70px;
+	
+}
+/* ------------- */
+/* 横幅BANNER设置 */
+#banner .banner_1{
+	width: 100%;
+	height: 700px;
+	background: url(../images/Banner.webp) repeat center;
+}
+#banner a:link,#banner a:visited{
+	color: #FFFFFF;
+}
+#banner i{
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	line-height: 1200px;
+	/* padding-top: 550px; */
+	font-size: 50px;
+	text-shadow: 0px 0px 20px #384a53;
+	/* transform: translate(50%,80%); */
+	position:relative;
+	animation:mymove 0.5s infinite;
+	-webkit-animation:mymove 0.5s infinite ease-in-out alternate; /* Safari and Chrome */
+}
+@keyframes mymove
+{
+	from{top:0px;}
+	to {top:20px;}
+}
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+	from{top:0px;}
+	to {top:20px;}
+}
+@-ms-keyframes mymove{
+	from{top:0px;}
+	to {top:20px;}
+}
+/* ------------- */
+/* 版权区块设置 */
+#copyright {
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #000000;
+	clear:both;
+}
+#copyright .copyright_con{
+	/* 版心 */
+	width: 800px;
+	line-height: 103px;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+	
+}
+/* ------------- */
+#foot .mylink {
+    background-color: #1A1A1A;
+	width: 100%;
+	height: 50px;
+}
+#foot .linkicon {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 50px;
+}
+#foot .linkicon a:link,
+#foot .linkicon a:visited
+{
+	margin: 10px;
+	color: #FFFFFF;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+#foot .linkicon a:hover{
+	color: #2998FF;
+	font-size: 25px;
+}
