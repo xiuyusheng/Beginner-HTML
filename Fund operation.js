@@ -1,3 +1,4 @@
+// 自动生成网格
 // var div2 = document.getElementById('div2');
 // var e=1;
 //     for(var i = 1;i < 362;i++){
@@ -16,14 +17,43 @@
 //         div2_1.style.margin = 0 + 'px ' + 0 + 'px ' + ' ' + 0 + ' ' + 0 + 'px';
 //         div2.appendChild(div2_1);
 //     }
-function xin(){
-    var f = 0;
-    f++;
-    var div3_1 = document.getElementById('div3_1'); 
-     div3_1.src = f + '.jpg';
-    setTimeout('xin()',1000);
+// 生成移动图片
+// var f = 0;
+// function xin(){
+//     if(f == 4)
+//     f -= 4;
+//     f++;
+//     var div3 = document.getElementById('div3');      
+//     div3.innerHTML = '<img src="' + f + '.jpg" alt="" id="div3_1" style=" animation-name: move;animation-duration: 3s;"></img>';    
+//     setTimeout('xin()',3000);
+// }
+// xin();
+// 进度条
+    var inputTime2 = +new Date('2022-1-25');
+    var inputTime3 = +new Date('2022-2-1');
+    var div4_width = document.getElementById('div4').offsetWidth;
+    var div4_p = document.getElementById('div4_p');
+function xiu(){
+
+    var inputTime4 = +new Date();
+    var shijianbi = ((inputTime4 - inputTime2) / (inputTime3 - inputTime2));
+
+    div4_p.style.width = div4_width * shijianbi + 'px';
+   
+    setTimeout('xiu()',1);
 }
-xin();
+xiu();
+div4_p.onmouseover = function(){
+    var inputTime4 = +new Date();
+    var shijianbi = ((inputTime4 - inputTime2) / (inputTime3 - inputTime2));
+    div4_p.innerHTML ='进度为：' + shijianbi;
+    setTimeout('div4_p.onmouseover',1);
+}
+div4_p.onmouseout = function(){
+    var inputTime4 = +new Date();
+    var shijianbi = ((inputTime4 - inputTime2) / (inputTime3 - inputTime2));
+    div4_p.innerHTML = ' <p style="position: relative;top: 30%;text-align: right;color: black;background: none;font-size:10px;display: none;">进度为：' + shijianbi + '</p>';
+}
 var a = 0,b = 0,c = 0,d=0;
 function xun(){
     // 获取当前时间
@@ -82,13 +112,10 @@ function xun(){
     if(a + b + c !=0){
         millise.style.background = 'rgb(' + a + ',' + b + ',' + c +')';  
         millise.style.color = 'rgb(' + (250 - a) + ',' + (250 - b) + ',' + ( 250 - c) +')';  
-
     }
-    
     // 函数自调用，实现无限循环
     setTimeout('xun()',1);
         return 0;
-    
     }
     xun();
     
