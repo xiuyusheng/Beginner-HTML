@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  z-index: 0;
+  font-family: KaiTi;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+  opacity: 0.5;
+}
+#head {
+  position: fixed;
+  top: 0;
+  width: auto;
+  height: 50px;
+  background-color: #fc7456;
+}
+#head div {
+  height: 1rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+#head #head_left {
+  width: 150px;
+  margin-left: 20px;
+}
+#head #head_left a {
+  margin-left: 20px;
+}
+#head #head_right {
+  float: right;
+  margin-right: 50px;
+}
+#biao {
+  margin-top: 50px;
+  font-family: YouYuan;
+}
+#kuang {
+  overflow: scroll;
+  position: absolute;
+  margin-top: 0px;
+}
+#div1 {
+  position: relative;
+  top: 0px;
+  display: flex;
+  justify-content: space-around;
+}
+#div1 a button {
+  height: 30px;
+  width: 0px;
+  border: none;
+  background-color: #e36a4d;
+}
+#div1 #sushi button {
+  background-color: #f1b5a6;
+}
+#div2 {
+  background-color: #ed3e17;
+}
+#div2 a {
+  display: block;
+  background-color: #f1b5a6;
+  margin-bottom: 5px;
+}
+#div2 a img {
+  border: 1px solid #991212;
+  border-radius: 17px;
+}
+#div2 a p {
+  display: inline-block;
+  font-size: 1rem;
+}
+#div3 button {
+  border: 2px solid #a074c4;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  border-radius: 20px;
+  position: fixed;
+  top: 600px;
+  right: 20px;
+}
+#div5 {
+  font-size: 1cm;
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+  background-color: rgba(255, 169, 36, 0.7);
+  display: none;
+}
+#div5 img {
+  width: auto;
+}
