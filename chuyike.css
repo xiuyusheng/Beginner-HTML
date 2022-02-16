@@ -13,7 +13,6 @@ a {
 a:hover {
   text-decoration: none;
   color: black;
-  opacity: 0.5;
 }
 #head {
   position: fixed;
@@ -45,7 +44,7 @@ a:hover {
 #kuang {
   overflow: scroll;
   position: absolute;
-  margin-top: 0px;
+  margin-top: -5px;
 }
 #div1 {
   position: relative;
@@ -59,22 +58,21 @@ a:hover {
   border: none;
   background-color: #e36a4d;
 }
-#div1 #sushi button {
-  background-color: #f1b5a6;
-}
 #div2 {
   background-color: #ed3e17;
 }
-#div2 a {
+#div2 button {
+  border: none;
   display: block;
   background-color: #f1b5a6;
   margin-bottom: 5px;
+  text-align: left;
 }
-#div2 a img {
+#div2 button img {
   border: 1px solid #991212;
-  border-radius: 17px;
+  border-radius: 17px 0 17px 0;
 }
-#div2 a p {
+#div2 button p {
   display: inline-block;
   font-size: 1rem;
 }
@@ -95,7 +93,7 @@ a:hover {
   position: fixed;
   top: 0px;
   z-index: 2;
-  background-color: rgba(255, 169, 36, 0.7);
+  background-color: #b7dee9;
   display: none;
 }
 #div5 img {
