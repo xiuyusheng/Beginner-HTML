@@ -73,6 +73,11 @@ a:hover {
   border-radius: 17px 0 17px 0;
 }
 #div2 button p {
+  white-space: normal;
+  overflow: scroll;
+  position: relative;
+  bottom: 100;
+  left: 10px;
   display: inline-block;
   font-size: 1rem;
 }
@@ -87,17 +92,14 @@ a:hover {
   right: 20px;
 }
 #div5 {
+  white-space: normal;
+  overflow-x: scroll;
   font-size: 1cm;
-  width: auto;
-  height: auto;
   position: fixed;
   top: 0px;
   z-index: 2;
   background-color: #b7dee9;
   display: none;
-}
-#div5 img {
-  width: auto;
 }
 .info {
   display: none;
