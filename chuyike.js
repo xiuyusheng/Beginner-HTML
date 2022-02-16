@@ -9,18 +9,20 @@
     var guanyu = document.getElementById('guanyu');
     var lianxi = document.getElementById('lianxi');
     var div5 = document.getElementById('div5');
-    var tankuang = document.getElementById('tankuang');
+    var tankuang = document.getElementsByTagName('button');
     var text1 = document.getElementById('text1');
-
-    tankuang.onclick =function(){
+    for(let i=4;i<20;i++){
+        tankuang[i].onclick =function(){
         div5.style.display = 'block';
         text1.innerHTML = this.innerHTML;
     }
-    div5.onclick = function(){
-        div5.style.display = 'none';
+        tankuang[i].style.width=shebei_width+'px';
     }
     div5.style.width = shebei_width + 'px';
     div5.style.height = shebei_height + 'px';
+    div5.onclick = function(){
+        div5.style.display = 'none';
+    }
     for(let i=1;i < cai.length;i++){
         cai[i].style.width = (shebei_width - 20) / 3 + 'px';
     }
@@ -52,7 +54,6 @@
     for (let i= 0; i < 4; i++) {
         button[i].style.width = head_width / 4 + 'px';
     }
-    
 // function xin() {
     
 //     setTimeout('xin()',1);    
