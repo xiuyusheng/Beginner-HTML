@@ -1,1 +1,67 @@
-;eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('3 q=7.9(\'q\');3 g=7.h(\'g\');3 j=E.N;3 a=E.O;3 s=7.P.Q;3 F=7.9(\'F\');3 k=7.h(\'R\');3 t=7.9(\'t\');3 u=7.9(\'u\');3 v=7.9(\'v\');3 b=7.9(\'b\');3 d=7.h(\'g\');3 w=7.9(\'w\');3 p=7.h(\'p\');x(y i=4;i<d.z-1;i++){d[i].e=f(){b.5.G=\'S\';w.H=p[i-4].H}p[p.z-1].5.T=a/10+\'8\';d[i].5.A=j/6+\'8\';d[i].5.c=a+\'8\'}b.5.c=a+\'8\';b.5.A=j+\'8\';b.e=f(){b.5.G=\'U\'}x(y i=1;i<k.z-1;i++){p[i-1].5.A=j/6-10+\'8\';p[i-1].5.c=(a-I)/2+\'8\';k[i].5.c=(a-I)/2+\'8\'}u.e=f(){l(\'      为了让大家在家也可以做出自己喜欢吃的菜，无论做给父母或是亲戚朋友，都是不错的选择，每道菜一定要自己品尝过之后在展示给他人哦，以免产生不悦的心情,有女盆友的快来选一道菜展示给你的小宝吧🥰.\\r\\r如有不满意可通过“我要加菜”或者“联系V”联系本人，谢谢。\')}v.e=f(){l(\'W:X（煮咖啡的大叔）\\n微信:Y（北伯凉意）\')}t.e=f(){3 m=o(\'请输入菜名，若内容为空结果不会被上传\');B(m){3 C=o(\'请输入菜方，若内容为空结果不会被上传\');B(C){3 J=o(\'图片链接（可不填，可在手机上下载“一个木函”Z，免费转图片为链接,或可发图片给作者）\');3 K=o(\'备注（可不填）\');3 L="11://12.13.14/15.M?16="+\'加菜了\'+"&17="+\'菜名：\'+m+\'💕\'+\'菜方：\'+C+\'❤️\'+\'备注:\'+K+\'🖼️\'+J;3 D=18 19();D.1a(\'1b\',L,1c);D.M();l(\'已上传，因作者较忙，因此需等次日才能有结果，还请谅解🙏\')}}1d B(m==="")l(\'请输入菜名\')}k[0].5.c=a+\'8\';q.5.c=s+\'8\';x(y i=0;i<4;i++){g[i].5.c=s/4+\'8\'}',62,76,'|||var||style||document|px|getElementById|shebei_width|div5|width|tankuang|onclick|function|button|getElementsByTagName||shebei_height|cai|alert|caiming||prompt||head||head_width|jiacai|guanyu|lianxi|text1|for|let|length|height|if|caifang|xhr|window|div2|display|innerHTML|20|zhaopian|beizhu|url|send|innerHeight|innerWidth|body|clientWidth|img|block|fontSize|none|me|QQ|3044639452|17676520416|app||https|sctapi|ftqq|com|SCT118418TYTpPgLPpQEf9DQM1rUSzlTq6|title|desp|new|XMLHttpRequest|open|GET|true|else'.split('|'),0,{}));
+    var head = document.getElementById('head');
+    var button = document.getElementsByTagName('button');
+    var shebei_height = window.innerHeight;
+    var shebei_width = window.innerWidth;
+    var head_width = document.body.clientWidth;
+    var div2 = document.getElementById('div2');
+    var cai = document.getElementsByTagName('img');
+    var jiacai = document.getElementById('jiacai');
+    var guanyu = document.getElementById('guanyu');
+    var lianxi = document.getElementById('lianxi');
+    var div5 = document.getElementById('div5');
+    var tankuang = document.getElementsByTagName('button');
+    var text1 = document.getElementById('text1');
+    var p = document.getElementsByTagName('p');
+    for(let i=4;i<tankuang.length-1;i++){
+        tankuang[i].onclick =function(){    
+        
+        div5.style.display = 'block';
+        text1.innerHTML =p[i-4].innerHTML;
+    }
+p[p.length-1].style.fontSize = shebei_width/10 + 'px';
+    tankuang[i].style.height = shebei_height/6 + 'px';
+    tankuang[i].style.width=shebei_width+'px';
+    }
+    div5.style.width = shebei_width + 'px';
+    div5.style.height = shebei_height + 'px';
+    div5.onclick = function(){
+        div5.style.display = 'none';
+    }
+    for(let i=1;i < cai.length-1;i++){
+        p[i-1].style.height = shebei_height/6 - 10 + 'px';
+        p[i-1].style.width =(shebei_width - 20) / 2 + 'px' ;
+        cai[i].style.width = (shebei_width - 20) / 2 + 'px';
+    }
+    guanyu.onclick = function(){
+        alert('      为了让大家在家也可以做出自己喜欢吃的菜，无论做给父母或是亲戚朋友，都是不错的选择，每道菜一定要自己品尝过之后在展示给他人哦，以免产生不悦的心情,有女盆友的快来选一道菜展示给你的小宝吧🥰.\r\r如有不满意可通过“我要加菜”或者“联系me”联系本人，谢谢。');
+    }
+    lianxi.onclick = function(){
+        alert('QQ:3044639452（煮咖啡的大叔）\n微信:17676520416（北伯凉意）');
+    }
+    jiacai.onclick = function() {       
+        var caiming = prompt('请输入菜名，若内容为空结果不会被上传');
+        if(caiming){
+            var caifang = prompt('请输入菜方，若内容为空结果不会被上传');
+            if(caifang){
+                var zhaopian = prompt('图片链接（可不填，可在手机上下载“一个木函”app，免费转图片为链接,或可发图片给作者）');
+                var beizhu = prompt('备注（可不填）');
+                var url = "https://sctapi.ftqq.com/SCT118418TYTpPgLPpQEf9DQM1rUSzlTq6.send?title="+ '加菜了' +"&desp=" +'菜名：'+ caiming + '💕'+'菜方：' + caifang +'❤️'+'备注:'+ beizhu+'🖼️'+zhaopian;
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', url, true);
+                xhr.send();
+                alert('已上传，因作者较忙，因此需等次日才能有结果，还请谅解🙏');
+            }
+         }
+         else if(caiming==="")
+         alert('请输入菜名');
+    }
+    cai[0].style.width = shebei_width + 'px';
+    head.style.width = head_width + 'px';
+    for (let i= 0; i < 4; i++) {
+        button[i].style.width = head_width / 4 + 'px';
+    }
+// function xin() {
+    
+//     setTimeout('xin()',1);    
+// }
+// xin();
