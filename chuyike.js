@@ -11,20 +11,26 @@
     var div5 = document.getElementById('div5');
     var tankuang = document.getElementsByTagName('button');
     var text1 = document.getElementById('text1');
-    for(let i=4;i<20;i++){
-        tankuang[i].onclick =function(){
+    var p = document.getElementsByTagName('p');
+    for(let i=4;i<tankuang.length-1;i++){
+        tankuang[i].onclick =function(){    
+        
         div5.style.display = 'block';
-        text1.innerHTML = this.innerHTML;
+        text1.innerHTML =p[i-4].innerHTML;
     }
-        tankuang[i].style.width=shebei_width+'px';
+p[p.length-1].style.fontSize = shebei_width/10 + 'px';
+    tankuang[i].style.height = shebei_height/6 + 'px';
+    tankuang[i].style.width=shebei_width+'px';
     }
     div5.style.width = shebei_width + 'px';
     div5.style.height = shebei_height + 'px';
     div5.onclick = function(){
         div5.style.display = 'none';
     }
-    for(let i=1;i < cai.length;i++){
-        cai[i].style.width = (shebei_width - 20) / 3 + 'px';
+    for(let i=1;i < cai.length-1;i++){
+        p[i-1].style.height = shebei_height/6 - 10 + 'px';
+        p[i-1].style.width =(shebei_width - 20) / 2 + 'px' ;
+        cai[i].style.width = (shebei_width - 20) / 2 + 'px';
     }
     guanyu.onclick = function(){
         alert('      为了让大家在家也可以做出自己喜欢吃的菜，无论做给父母或是亲戚朋友，都是不错的选择，每道菜一定要自己品尝过之后在展示给他人哦，以免产生不悦的心情,有女盆友的快来选一道菜展示给你的小宝吧🥰.\r\r如有不满意可通过“我要加菜”或者“联系me”联系本人，谢谢。');
